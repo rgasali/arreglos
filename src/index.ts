@@ -24,23 +24,21 @@ function assignValues(arreglo: number[], numero: number) {
       )
     );
     arreglo.push(positionValue);
-  }
+  }}
 }
 
 btnProcesarArreglos.addEventListener("click", () => {
   arrayLength = Number(tamanioArreglos.value);
   if (arrayLength >= 10 || arrayLength <= 0) {
     alert("el tamaño de los arreglos debe ser mayor que 0 y menor que 10");
-  } else {
-    console.log(
-      "los valores de los arreglos 1, 2 y 3 son: " + array1,
-      array2,
-      array3
-    );
-    console.log("los valores del arreglo 4 son:" + array4);
+  }
+  else {
     assignValues(array1, 1);
     assignValues(array2, 2);
     assignValues(array3, 3);
+    console.log(
+      `valores del arreglo uno: ${array1}, del arreglo dos: ${array2}, y del arreglo tres: ${array3}`
+    );
     let contador = 0;
     for (contador = 0; contador <= arrayLength - 1; contador++) {
       positionValue = Number(
@@ -48,6 +46,7 @@ btnProcesarArreglos.addEventListener("click", () => {
       );
       array4.push(positionValue);
     }
+    console.log(`los valores del arreglo cuatro son: ${array4}`);
     array1 = new Array(arrayLength);
     array2 = new Array(arrayLength);
     array3 = new Array(arrayLength);
